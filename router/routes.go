@@ -26,5 +26,17 @@ func InitializeRoutes(r *gin.Engine) {
 				"message": "API v1 opening - DELETE",
 			})
 		})
+
+		v1.PUT("/opening", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"message": "API v1 opening - GET",
+			})
+		})
+
+		v1.GET("/openings", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"message": "API v1 openings - GET",
+			})
+		})
 	}
 }
